@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Admin Dashboard | SAI VELAN STUDIO</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+    <header class="admin-header">
+
+        <div>
+            <span class="admin-label">ADMIN PANEL</span>
+            <h1>SAI VELAN STUDIO</h1>
+        </div>
+
+        <button id="logoutBtn">
+            Logout
+        </button>
+
+    </header>
+
+
+    <main class="dashboard">
+
+        <section class="dashboard-title">
+
+            <div>
+                <p>ENQUIRY MANAGEMENT</p>
+
+                <h2>
+                    Client Enquiries
+                </h2>
+            </div>
+
+            <button
+                id="refreshBtn"
+                class="refresh-btn"
+            >
+                ↻ Refresh
+            </button>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <span>Total Enquiries</span>
+
+                <strong id="totalEnquiries">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>Wedding</span>
+
+                <strong id="weddingEnquiries">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>Portrait</span>
+
+                <strong id="portraitEnquiries">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span>Other Services</span>
+
+                <strong id="otherEnquiries">
+                    0
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH -->
+
+        <section class="toolbar">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search client, phone or service..."
+            >
+
+        </section>
+
+
+        <!-- ENQUIRIES -->
+
+        <section class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Client</th>
+
+                        <th>Phone</th>
+
+                        <th>Service</th>
+
+                        <th>Event Date</th>
+
+                        <th>Received</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="enquiryTable">
+
+                    <tr>
+
+                        <td colspan="6">
+                            Loading enquiries...
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
